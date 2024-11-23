@@ -1,4 +1,4 @@
-[![](https://dcbadge.vercel.app/api/server/kmJDjqeEdp)](https://discord.gg/kmJDjqeEdp)
+[![<img alt="discord-plural" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg">](https://discord.gg/zwsPDSbUQB)
 
 ## This is the official download page. Anywhere else with a download for this client could be trying to hack you
 
