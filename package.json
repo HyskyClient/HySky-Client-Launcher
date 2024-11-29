@@ -20,6 +20,9 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
+    "electron-json-storage": "^4.6.0",
+    "minecraft-launcher-core": "^3.18.1",
+    "msmc": "^5.0.5",
     "react-router-dom": "^7.0.1",
     "sass": "^1.81.0"
   },
