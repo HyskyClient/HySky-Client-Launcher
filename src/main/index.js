@@ -2,7 +2,9 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-import { login } from './minecraft'
+
+import * as mc from './minecraft'
+import * as db from "./database"
 
 export const mainWindow = {
   window: null,
@@ -49,11 +51,14 @@ function createWindow() {
 app.whenReady().then(() => {
   electronApp.setAppUserModelId('xyz.limegradient')
 
+  mc.attemptLogin()
+
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
 
-  ipcMain.on('login', login())
+  ipcMain.on("login", async(event) => mc.login())
+  ipcMain.on("getAccounts", async(event) => mc.getAccounts())
 
   createWindow()
 
@@ -65,5 +70,6 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
+    db.closeDB()
   }
 })

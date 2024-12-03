@@ -2,6 +2,14 @@
 
 A brand new Hypixel Skyblock client.
 
+# How to Build
+```
+git clone https://github.com/HyskyClient/HySky-Client-Launcher
+cd HySky-Client-Launcher
+npm install
+npm run dev
+```
+
 # Todo
 - Account Authorization
     - Multi Account Auth

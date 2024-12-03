@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AccountCell from "../components/AccountCell";
 import Navbar from "../components/Navbar"
 
@@ -5,6 +6,10 @@ import "../styles/LoginPage.scss"
 
 export default function LoginPage() {
     const ipcHandle = (ipcRoute) => window.electron.ipcRenderer.send(ipcRoute);
+
+    useEffect(() => {
+        ipcHandle("getAccounts")
+    }, [])
 
     return (
         <>
