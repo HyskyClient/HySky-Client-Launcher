@@ -1,0 +1,21 @@
+.account-cell {
+    border: 4px solid;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(127, 127, 127, 0.5);
+    display: inline-block;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.account-image {
+    padding-right: 2.5%;
+    float: left;
+    justify-self: start;
+}

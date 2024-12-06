@@ -20,7 +20,7 @@ export async function attemptLogin() {
 
 export async function getAccounts() {
     db.getAllAccounts().then(accounts => {
-        
+        mainWindow.getWindow.webContents.send("onAccounts", accounts)
     })
 }
 
